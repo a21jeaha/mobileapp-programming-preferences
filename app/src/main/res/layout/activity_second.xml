@@ -20,6 +20,8 @@
         android:id="@+id/second_activity_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        tools:text="temptext"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/test_edit_demo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +30,7 @@
         />
 
     <Button
-        android:id="@+id/accept_text"
+        android:id="@+id/accept_text_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/accept_text"
@@ -39,7 +41,7 @@
         />
 
     <Button
-        android:id="@+id/share_text"
+        android:id="@+id/share_text_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/share_text"
