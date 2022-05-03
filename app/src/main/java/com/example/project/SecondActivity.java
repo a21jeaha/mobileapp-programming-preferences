@@ -43,8 +43,8 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void onTappSecond(){
-        textView.setText(editText.getText().toString());         // det som står skrivet i EditText widgeten skickas till textView och vissas upp
+        textView.setText(editText.getText().toString());                                            // det som står skrivet i EditText widgeten skickas till textView och vissas upp.
         mySharedPreferenceEditor.putString("text_from_edittext", textView.getText().toString());    // placerar String-värdert i en preference
-        mySharedPreferenceEditor.apply();                                                           //
+        mySharedPreferenceEditor.apply();                                                           // notera att det är samma "key" värde som i (mySharedPreferenceRef.getString("text_from_edittext","nothing written here..")
     }
 }

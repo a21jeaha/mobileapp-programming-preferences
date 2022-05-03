@@ -22,18 +22,26 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-       intent = new Intent(MainActivity.this, SecondActivity.class);
-
-       openActivityTwo = findViewById(R.id.activity_two_button);
-       openActivityTwo.setOnClickListener(new View.OnClickListener() {
-           @Override
+       intent = new Intent(MainActivity.this, SecondActivity.class);           //
+                                                                                            //
+       openActivityTwo = findViewById(R.id.activity_two_button);                            //
+       openActivityTwo.setOnClickListener(new View.OnClickListener() {                      //
+           @Override                                                                        // Används för att öppna activity_second
            public void onClick(View v) {
                onTapp();
-           }
-       });
+           }                                        //
+       });                                                                                  //
+    }
+
+
+    protected void onResume() {
+
+        super.onResume();
+
+
     }
 
     private void onTapp() {
-       startActivity(intent);
+       startActivity(intent);       // aktiverar intenten som öppnar activity_second
     }
 }
