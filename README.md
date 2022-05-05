@@ -46,7 +46,49 @@ Alla widgets som skapats i `activity_secound` kopplas samman med variabler via _
 
 När det var klart skapades instanser av `SharedPreferences` och `SharedPreferences.Editor` klasserna i *onCreate* metoden, 
 
-**Skriv din rapport här!**
+```java
+public class SecondActivity extends AppCompatActivity {
+
+    private TextView textView;                                          //
+    private EditText editText;                                          // diverse widgets skapas
+    private Button acceptTextButton;                                    //
+
+    private SharedPreferences mySharedPreferenceRef;                    // shared preference object skapad
+    private SharedPreferences.Editor mySharedPreferenceEditor;          //
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+
+        acceptTextButton = findViewById(R.id.accept_text_Button);               // knappen kommer användas för att registrera text som skrivits i editText widgeten.
+        acceptTextButton.setOnClickListener(new View.OnClickListener() {        //
+            @Override
+            public void onClick(View v) {
+                onTappSecond();
+            }
+        });
+
+        textView = findViewById(R.id.second_activity_text);
+        editText = findViewById(R.id.test_edit_demo);
+
+
+        mySharedPreferenceRef = getSharedPreferences("Preferences", (MODE_PRIVATE));                 // shared preference initierad
+        mySharedPreferenceEditor = mySharedPreferenceRef.edit();                                    //
+
+        textView.setText(mySharedPreferenceRef.getString("text_from_edittext", "nothing written here.."));   // textViewn fylls med text, i detta fall finns det ingen text i registrerad till denna nyckel. Därför kommer meddelandet "nothing written here.." skrivas in istället.
+
+    }
+}
+```
+
+
+
+
+
+
+
+**Skriv din rapport här!*
 
 _Du kan ta bort all text som finns sedan tidigare_.
 

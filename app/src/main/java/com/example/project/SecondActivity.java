@@ -15,7 +15,7 @@ public class SecondActivity extends AppCompatActivity {
     private EditText editText;                                          // diverse widgets skapas
     private Button acceptTextButton;                                    //
 
-    private SharedPreferences mySharedPreferenceRef;                    // shared preference object skaoad
+    private SharedPreferences mySharedPreferenceRef;                    // shared preference object skapad
     private SharedPreferences.Editor mySharedPreferenceEditor;          //
 
     @Override
