@@ -113,5 +113,6 @@ Här initieras `SharedPreferences` och `SharedPreferences.Editor` som medlems va
 ```
 
 ![](mainactivity1.png)
-![](secoundactivity1.png)
+![](secondactivity1.png)
+![](secondactivity2.png)
 ![](mainactivity2.png)
