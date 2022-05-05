@@ -1,10 +1,8 @@
 package com.example.project;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -30,24 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.main_textview);
 
-//        mainSharedPreference = getSharedPreferences("Preferences", MODE_PRIVATE);       //
-//        mainSharedPreferenceEditor = mainSharedPreference.edit();                                     // ger tillgång till den delade preferencen vid namn Preference
-//        mainSharedPreference = getPreferences(MODE_PRIVATE);                                          //
-//        mainSharedPreferenceEditor = mainSharedPreference.edit();                                     //
-//
-//
-//        textView.setText(mainSharedPreference.getString("main_preference", "Nothing written here..."));
-
-
-       intent = new Intent(MainActivity.this, SecondActivity.class);           //
+        intent = new Intent(MainActivity.this, SecondActivity.class);           //
                                                                                             //
-       openActivityTwo = findViewById(R.id.activity_two_button);                            //
-       openActivityTwo.setOnClickListener(new View.OnClickListener() {                      //
-           @Override                                                                        // Används för att öppna activity_second
-           public void onClick(View v) {                                                    //
-               onTapp();                                                                    //
-           }                                                                                //
-       });                                                                                  //
+        openActivityTwo = findViewById(R.id.activity_two_button);                            //
+        openActivityTwo.setOnClickListener(new View.OnClickListener() {                      //
+            @Override                                                                        // Används för att öppna activity_second
+            public void onClick(View v) {                                                    //
+                onTapp();                                                                    //
+            }                                                                                //
+        });                                                                                  //
     }
 
     @Override
@@ -63,6 +52,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void onTapp() {
-       startActivity(intent);       // aktiverar intenten som öppnar activity_second
+        startActivity(intent);       // aktiverar intenten som öppnar activity_second
     }
 }
