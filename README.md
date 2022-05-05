@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Det skrevs till ett ID till TextViewn som fanns förprogramerad i `activity_main` för att möjliggöra __findViewByiD__ då den inte hade någon.  
-Alla widgets som skapats i `activity_secound` kopplas samman med variabler via __findViewByiD__ 
+Det skrevs till ett ID till TextViewn som fanns förprogrammerad i `activity_main` för att möjliggöra __findViewByiD__ då den inte hade någon.  
+Alla widgets som skapats i `activity_secound` kopplas samman med variabler via __findViewByiD__
 
 När det var klart skapades instanser av `SharedPreferences` och `SharedPreferences.Editor` klasserna i *onCreate* metoden, notera att *getSharedPreferences*  får ett namn "_Preferences_", detta så att delandet kan ske mellan aktiviteter.
 
@@ -95,7 +95,7 @@ Den knapp som skapades i aktivitet två sätter först texten i textViewn, för 
     
 ```
 
-För att värdet i stängen ska vara synlig i `MainActivity` så måste kod skrivas i metoden onResum(), då denna metod är det första som körs när man återkommer till aktiviteten.
+För att värdet i stängen ska vara synlig i `MainActivity` så måste kod skrivas i metoden onResume(), då denna metod är det första som körs när man återkommer till aktiviteten.
 Här initieras `SharedPreferences` och `SharedPreferences.Editor` som medlems variabler, notera att _getSharedPreferences_ har samma namn _"Preferences"_ och kan därför nå den delade stängen. 
 
 ```java
@@ -114,5 +114,4 @@ Här initieras `SharedPreferences` och `SharedPreferences.Editor` som medlems va
 
 ![](mainactivity1.png)
 ![](secoundactivity1.png)
-![](secondactivity2.png)
 ![](mainactivity2.png)
