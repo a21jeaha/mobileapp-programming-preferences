@@ -35,8 +35,8 @@ public class SecondActivity extends AppCompatActivity {
         editText = findViewById(R.id.test_edit_demo);
 
 
-        mySharedPreferenceRef = getPreferences(MODE_PRIVATE);           // shared preference initierad
-        mySharedPreferenceEditor = mySharedPreferenceRef.edit();        //
+        mySharedPreferenceRef = getSharedPreferences("Preferences",(MODE_PRIVATE));           // shared preference initierad
+        mySharedPreferenceEditor = mySharedPreferenceRef.edit();                                    //
 
         textView.setText(mySharedPreferenceRef.getString("text_from_edittext","nothing written here.."));
 
