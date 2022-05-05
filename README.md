@@ -1,5 +1,49 @@
 
-# Rapport
+# Rapport Assignment 6: Shared preferences
+
+
+Det första som gjordes var att skapa en ny `Layout Resorce File`, det implementerades en *Knapp* och *TextView* i denna nya aktivitet. 
+I `Activity_Main.xml` skapas en knapp som senare används i `MainActivity.java` för att öppna den tidigare skapade aktiviteten, detta görs via ett intent vid knapptryck. 
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    TextView textView;
+    Button openActivityTwo;                              //  <<-----
+    Intent intent;                                       //  <<-----
+    SharedPreferences mainSharedPreference;
+    SharedPreferences.Editor mainSharedPreferenceEditor;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        textView = findViewById(R.id.main_textview);
+
+        intent = new Intent(MainActivity.this, SecondActivity.class);                        //
+                                                                                             // 
+        openActivityTwo = findViewById(R.id.activity_two_button);                            //
+        openActivityTwo.setOnClickListener(new View.OnClickListener() {                      //
+            @Override                                                                        // Används för att öppna activity_second
+            public void onClick(View v) {                                                    //
+                onTapp();                                                                    //
+            }                                                                                //
+        });                                                                                  //
+    }
+
+    private void onTapp() {
+        startActivity(intent);       // aktiverar intenten som öppnar activity_second
+    }
+}
+```
+
+
+
+
 
 **Skriv din rapport här!**
 

@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.main_textview);
 
         intent = new Intent(MainActivity.this, SecondActivity.class);           //
-                                                                                            //
+                                                                                             //
         openActivityTwo = findViewById(R.id.activity_two_button);                            //
         openActivityTwo.setOnClickListener(new View.OnClickListener() {                      //
             @Override                                                                        // Används för att öppna activity_second
