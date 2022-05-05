@@ -41,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+Det skrevs till ett ID till TextViewn som fanns förprogramerad i `activity_main` för att möjliggöra __findViewByiD__ då den inte hade någon.  
+Alla widgets som skapats i `activity_secound` kopplas samman med variabler via __findViewByiD__ 
 
-
-
+När det var klart skapades instanser av `SharedPreferences` och `SharedPreferences.Editor` klasserna i *onCreate* metoden, 
 
 **Skriv din rapport här!**
 
