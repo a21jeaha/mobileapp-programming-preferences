@@ -16,7 +16,7 @@ public class SecondActivity extends AppCompatActivity {
     private Button acceptTextButton;                                    //
 
     private SharedPreferences mySharedPreferenceRef;                    // shared preference object skapad
-    private SharedPreferences.Editor mySharedPreferenceEditor;          //
+    private SharedPreferences.Editor mySharedPreferenceEditor;          ///
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
